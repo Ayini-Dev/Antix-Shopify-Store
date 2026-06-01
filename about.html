@@ -233,16 +233,23 @@
                 transform: translateY(0);
                 pointer-events: auto;
             }
+            
             .hero {
-                height: 70vh;
-                display: flex;
-                justify-content: center; 
-                align-items: center;     
-
-                background: url("assets/image1.png") center center / cover no-repeat;
-
                 position: relative;
-                margin-top: 20px;
+                height: 70vh;
+                min-height: 400px;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 40px;
+            }
+                        
+            .hero-img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
             }
 
 
@@ -1016,6 +1023,8 @@
         </div>
 <!--This is the hero section-->
     <section class="hero">
+    <img src="assets/image1.png" class="hero-img">
+    
     <div class="hero-content">
         <h1>Break The Silence</h1>
         <p>Experience studio quality sound on the go</p>
@@ -1025,6 +1034,8 @@
         </div>
     </div>
 </section>
+
+    
 <footer class="footer">
     <div class="footer-container">
 
