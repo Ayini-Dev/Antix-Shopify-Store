@@ -1,7 +1,7 @@
 <!Doctype html>
 <html lang="en">
     <head>
-        <meta charset="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Antix | Home Page</title>
 
         <style>
@@ -238,7 +238,7 @@
                 justify-content: center; 
                 align-items: center;     
 
-                background: url("assets/image1.png") right center / cover no-repeat;
+                background: url("assets/image1.png") center center / cover no-repeat;
 
                 position: relative;
                 margin-top: 20px;
@@ -503,6 +503,90 @@
                     transform: scale(1.1);
                     cursor: pointer;
                     }
+                    /* ================= MOBILE RESPONSIVE ================= */
+
+                @media (max-width: 768px) {
+
+                    /* NAVBAR */
+                    .navbar {
+                        flex-direction: column;
+                        padding: 15px;
+                    }
+
+                    .nav-left,
+                    .nav-right {
+                        width: 100%;
+                        justify-content: space-between;
+                    }
+
+                    /* FIX LOGO POSITION */
+                    .logo-container {
+                        position: static;
+                        transform: none;
+                        margin-top: 10px;
+                        justify-content: center;
+                    }
+
+                    .logo {
+                        width: 40px;
+                    }
+
+                    .text {
+                        position: static;
+                        font-size: 20px;
+                        transform: none;
+                        animation: none;
+                    }
+
+                    /* SEARCH */
+                    .search-container input {
+                        width: 80%;
+                    }
+
+                    /* HERO */
+                    .hero {
+                        height: 60vh;
+                        background-position: center;
+                    }
+
+                    .hero h1 {
+                        font-size: 32px;
+                        text-align: center;
+                    }
+
+                    .hero p {
+                        font-size: 14px;
+                        text-align: center;
+                        padding: 0 15px;
+                    }
+
+                    .hero-buttons {
+                        flex-direction: column;
+                        gap: 10px;
+                    }
+
+                    /* BUTTON */
+                    .btn {
+                        width: 80%;
+                        text-align: center;
+                    }
+
+                    /* FOOTER */
+                    .footer-container {
+                        flex-direction: column;
+                        gap: 40px;
+                        text-align: center;
+                    }
+
+                    .footer-links {
+                        flex-direction: column;
+                        gap: 30px;
+                    }
+
+                    .footer {
+                        padding: 60px 20px;
+                    }
+                }
 
 
 
@@ -627,30 +711,6 @@ const text = "Search for earbuds...";
 const input = document.getElementById("searchInput");
 
 let index = 0;
-
-function typeEffect() {
-    if (index < text.length) {
-        input.setAttribute("placeholder", text.substring(0, index + 1));
-        index++;
-        setTimeout(typeEffect, 50); // typing speed
-    }
-}
-
-typeEffect();
-
-function typeEffect() {
-    if (index < text.length) {
-        input.setAttribute(
-            "placeholder",
-            text.substring(0, index + 1) + "|"
-        );
-        index++;
-        setTimeout(typeEffect, 50);
-    } else {
-        // remove cursor after finish
-        input.setAttribute("placeholder", text);
-    }
-}
 
 function typeEffect() {
     if (index < text.length) {
