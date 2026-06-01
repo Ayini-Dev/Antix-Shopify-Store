@@ -9,6 +9,7 @@
             font-family: 'Inter', sans-serif;
                 background-color: #050505;
                 margin: 0;
+                overflow-x: hidden;
             }
             .navbar {
             position: relative;
@@ -161,7 +162,7 @@
                 gap: 10px;
                 }
                 .search-container input {
-                width: 400px;
+                width: 90%;
                 padding: 12px 16px;
                 border-radius: 30px;
                 border: 1px solid rgba(255,255,255,0.1);
@@ -515,25 +516,31 @@
 
                     .nav-left,
                     .nav-right {
-                        width: 100%;
+                        width: auto;
                         justify-content: space-between;
                     }
 
                     /* FIX LOGO POSITION */
                     .logo-container {
-                        position: static;
+                        position: absolute;
                         transform: none;
                         margin-top: 10px;
                         justify-content: center;
                     }
 
                     .logo {
-                        width: 40px;
+                        width: 35px;
+                    }
+                    .nav-right {
+                        gap: 12px;
+                    }
+                    .lang-wrapper img {
+                        width: 20px;
                     }
 
                     .text {
                         position: static;
-                        font-size: 20px;
+                        font-size: 18px;
                         transform: none;
                         animation: none;
                     }
@@ -545,7 +552,7 @@
 
                     /* HERO */
                     .hero {
-                        height: 60vh;
+                        height: 65vh;
                         background-position: center;
                     }
 
@@ -567,8 +574,9 @@
 
                     /* BUTTON */
                     .btn {
-                        width: 80%;
+                        width: auto;
                         text-align: center;
+                        display: inline-block;
                     }
 
                     /* FOOTER */
