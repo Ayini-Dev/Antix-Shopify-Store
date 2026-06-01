@@ -460,7 +460,7 @@
             }
             .logo-container {
                 position: absolute;
-                left: 45%;
+                left: 50%;
                 top: 50%;
                 transform: translate(-50%, -50%); /* perfect center */
                 display: flex;
@@ -595,6 +595,96 @@
                         padding: 60px 20px;
                     }
                 }
+                @media (max-width: 430px) {
+                     /* NAVBAR */
+                    .navbar {
+                        flex-direction: column;
+                        padding: 10px;
+                    }
+
+                    .nav-left,
+                    .nav-right {
+                        width: auto;
+                        justify-content: space-between;
+                    }
+
+                    /* FIX LOGO POSITION */
+                    .logo-container {
+                        position: absolute;
+                        transform: none;
+                        margin-top: 10px;
+                        justify-content: center;
+                    }
+
+                    .logo {
+                        width: 28px;
+                    }
+                    .nav-right {
+                        gap: 12px;
+                    }
+                    .lang-wrapper img {
+                        width: 20px;
+                    }
+
+                    .text {
+                        position: static;
+                        font-size: 14px;
+                        transform: none;
+                        animation: none;
+                    }
+
+                    /* SEARCH */
+                    .search-container input {
+                        width: 80%;
+                    }
+
+                    /* HERO */
+                    .hero {
+                        height: 65vh;
+                        background-position: center;
+                    }
+
+                    .hero h1 {
+                        font-size: 24px;
+                        text-align: center;
+                    }
+
+                    .hero p {
+                        font-size: 14px;
+                        text-align: center;
+                        padding: 0 15px;
+                    }
+
+                    .hero-buttons {
+                        flex-direction: column;
+                        gap: 10px;
+                    }
+
+                    /* BUTTON */
+                    .btn {
+                        width: auto;
+                        text-align: center;
+                        display: inline-block;
+                    }
+
+                    /* FOOTER */
+                    .footer-container {
+                        flex-direction: column;
+                        gap: 40px;
+                        text-align: center;
+                    }
+
+                    .footer-links {
+                        flex-direction: column;
+                        gap: 30px;
+                    }
+
+                    .footer {
+                        padding: 60px 20px;
+                    }
+
+                }
+
                 @media (max-width: 375px) {
                     /* NAVBAR */
                     .navbar {
